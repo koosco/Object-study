@@ -11,4 +11,8 @@ public class TicketSeller {
     public Ticket getTicket() {
         return ticketOffice.getTicket();
     }
+
+    public void sell(Long fee) {
+        ticketOffice.plusAmount(fee);
+    }
 }
