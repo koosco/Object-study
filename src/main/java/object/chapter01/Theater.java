@@ -8,11 +8,8 @@ public class Theater {
     private TicketSeller ticketSeller;
 
     public void enter(Audience audience) {
-        Ticket ticket;
-        if (audience.isInvited()) {
-            ticket = ticketSeller.getTicket();
-        } else {
-            ticket = ticketSeller.getTicket();
+        Ticket ticket = ticketSeller.getTicket();
+        if (!audience.isInvited()) {
             audience.pay(ticket.getFee());
             ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
         }
