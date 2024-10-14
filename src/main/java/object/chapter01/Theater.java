@@ -10,9 +10,9 @@ public class Theater {
     public void enter(Audience audience) {
         Ticket ticket;
         if (audience.isInvited()) {
-            ticket = ticketSeller.getTicketOffice().getTicket();
+            ticket = ticketSeller.getTicket();
         } else {
-            ticket = ticketSeller.getTicketOffice().getTicket();
+            ticket = ticketSeller.getTicket();
             audience.getBag().minusAmount(ticket.getFee());
             ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
         }
