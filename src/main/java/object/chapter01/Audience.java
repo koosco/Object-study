@@ -12,4 +12,8 @@ public class Audience {
     public boolean isInvited() {
         return bag.hasInvitation();
     }
+
+    public void putTicket(Ticket ticket) {
+        bag.setTicket(ticket);
+    }
 }
