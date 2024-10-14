@@ -8,4 +8,8 @@ import lombok.Getter;
 public class Audience {
 
     private Bag bag;
+
+    public boolean isInvited() {
+        return bag.hasInvitation();
+    }
 }

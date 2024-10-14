@@ -7,7 +7,7 @@ public class Theater {
     private TicketSeller ticketSeller;
 
     public void enter(Audience audience) {
-        if (audience.getBag().hasInvitation()) {
+        if (audience.isInvited()) {
             Ticket ticket = ticketSeller.getTicketOffice().getTicket();
             audience.getBag().setTicket(ticket);
         } else {
