@@ -16,4 +16,8 @@ public class Audience {
     public void putTicket(Ticket ticket) {
         bag.setTicket(ticket);
     }
+
+    public void pay(Long fee) {
+        bag.minusAmount(fee);
+    }
 }

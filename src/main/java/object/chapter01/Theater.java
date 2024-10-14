@@ -13,7 +13,7 @@ public class Theater {
             ticket = ticketSeller.getTicket();
         } else {
             ticket = ticketSeller.getTicket();
-            audience.getBag().minusAmount(ticket.getFee());
+            audience.pay(ticket.getFee());
             ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
         }
         audience.putTicket(ticket);
