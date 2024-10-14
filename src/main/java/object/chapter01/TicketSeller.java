@@ -15,4 +15,13 @@ public class TicketSeller {
     public void sell(Long fee) {
         ticketOffice.plusAmount(fee);
     }
+
+    public void sellTo(Audience audience) {
+        Ticket ticket = getTicket();
+        if (!audience.isInvited()) {
+            sell(ticket.getFee());
+            audience.pay(ticket.getFee());
+        }
+        audience.putTicket(ticket);
+    }
 }
