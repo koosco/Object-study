@@ -2,8 +2,9 @@ package object.chapter02.movie;
 
 import java.time.Duration;
 import lombok.Getter;
-import object.chapter02.movie.discount.DefaultDiscountPolicy;
 import object.chapter02.common.Money;
+import object.chapter02.movie.discount.DefaultDiscountPolicy;
+import object.chapter02.movie.discount.DiscountPolicy;
 
 public class Movie {
 
@@ -11,7 +12,7 @@ public class Movie {
     private Duration runningTime;
     @Getter
     private Money fee;
-    private DefaultDiscountPolicy discountPolicy;
+    private DiscountPolicy discountPolicy;
 
     public Movie(String title, Duration runningTime, Money fee, DefaultDiscountPolicy discountPolicy) {
         this.title = title;
